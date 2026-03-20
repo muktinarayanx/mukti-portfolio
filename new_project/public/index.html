@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Fuel Data Management</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">FuelData Pro</div>
+        <div class="nav-links">
+            <span id="userEmail" class="user-email"></span>
+            <button id="logoutBtn" class="btn btn-outline" onclick="logout()">Logout</button>
+        </div>
+    </nav>
+
+    <main class="dashboard-container">
+        <section class="form-section glass-panel">
+            <h2>Add New Fuel Transaction</h2>
+            <form id="addFuelForm">
+                <div class="input-group">
+                    <label for="date">Date</label>
+                    <input type="date" id="date" required>
+                </div>
+                <div class="input-group">
+                    <label for="vehicleNumber">Vehicle Number</label>
+                    <input type="text" id="vehicleNumber" placeholder="e.g., AB-12-CD-3456" required>
+                </div>
+                <div class="input-group">
+                    <label for="litres">Litres</label>
+                    <input type="number" step="0.01" id="litres" placeholder="0.00" required>
+                </div>
+                <div class="input-group">
+                    <label for="pricePerLitre">Price Per Litre ($)</label>
+                    <input type="number" step="0.01" id="pricePerLitre" placeholder="0.00" required>
+                </div>
+                <div class="input-group">
+                    <label for="instructorName">Instructor Name</label>
+                    <input type="text" id="instructorName" placeholder="e.g., John Doe" required>
+                </div>
+                <!-- Total is auto-calculated visually or left to backend, but let's show it read-only -->
+                <div class="input-group">
+                    <label for="totalAmountDisplay">Total Amount (Auto-Calculated)</label>
+                    <input type="text" id="totalAmountDisplay" readonly placeholder="$0.00">
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Save Transaction & Generate Bill</button>
+                <div id="formMessage" class="message"></div>
+            </form>
+        </section>
+
+        <section class="records-section glass-panel">
+            <h2>Recent Transactions</h2>
+            <div class="table-container">
+                <table id="recordsTable">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Vehicle</th>
+                            <th>Instructor</th>
+                            <th>Litres</th>
+                            <th>Price / L</th>
+                            <th>Total</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="recordsBody">
+                        <!-- Records will be injected here -->
+                    </tbody>
+                </table>
+            </div>
+            <div id="tableLoading" class="hidden">Loading records...</div>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+    <script>
+        // Check auth immediately on load
+        if (!localStorage.getItem('token')) {
+            window.location.href = 'login.html';
+        } else {
+            initDashboard();
+        }
+    </script>
+</body>
+
+</html>

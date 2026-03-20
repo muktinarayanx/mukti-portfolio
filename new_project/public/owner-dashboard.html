@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Owner Dashboard - Fuel Data Management</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">Tirupati Balaji - Owner Global View</div>
+        <div class="nav-links">
+            <span id="userEmail" class="user-email"></span>
+            <button id="logoutBtn" class="btn btn-outline" onclick="logout()">Logout</button>
+        </div>
+    </nav>
+
+    <main class="dashboard-container" style="max-width: 1000px;">
+        <section class="records-section glass-panel" style="width: 100%;">
+            <h2>Global Transaction Records</h2>
+            <p style="margin-bottom: 20px; font-size: 0.9rem; opacity: 0.8;">Viewing all transactions entered across the
+                system by any Instructor.</p>
+            <div class="table-container">
+                <table id="recordsTable">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Vehicle</th>
+                            <th>Litres</th>
+                            <th>Price / L</th>
+                            <th>Total</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="ownerRecordsBody">
+                        <!-- Records will be injected here -->
+                    </tbody>
+                </table>
+            </div>
+            <div id="tableLoading" class="hidden">Loading global records...</div>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+    <script>
+        // Check auth immediately on load
+        if (!localStorage.getItem('token')) {
+            window.location.href = 'login.html';
+        } else {
+            // Verify role locally if stored, though the API will enforce it anyway
+            const storedRole = localStorage.getItem('role');
+            if (storedRole && storedRole !== 'owner') {
+                window.location.href = 'index.html'; // Kick non-owners back to their dash
+            } else {
+                initOwnerDashboard();
+            }
+        }
+    </script>
+</body>
+
+</html>
