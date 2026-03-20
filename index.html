@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Mukti Narayan — Aerospace Engineering Student specializing in Aerodynamics, Rocket Propulsion, and Model Rocketry. Explore my projects, skills, and passion for space technology." />
+  <title>Mukti Narayan | Aerospace Engineer</title>
+
+  <!-- Google Fonts: Orbitron (headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@500;700;900&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- =============== LOADER =============== -->
+  <div id="loader">
+    <div style="text-align:center;">
+      <div class="loader-rocket">🚀</div>
+      <div class="loader-text">Launching…</div>
+    </div>
+  </div>
+
+  <!-- =============== PARTICLES =============== -->
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- =============== FLOATING ROCKET =============== -->
+  <div class="floating-rocket" title="To the stars!">🚀</div>
+
+  <!-- =============== NAVBAR =============== -->
+  <nav class="navbar" id="navbar">
+    <a href="#hero" class="nav-logo">MN<span>.</span></a>
+    <div class="nav-links" id="navLinks">
+      <a href="#hero">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- =============== HERO =============== -->
+  <section class="hero" id="hero">
+    <div class="hero-content">
+      <span class="hero-tag">Welcome to my universe</span>
+      <h1>Hi, I'm <span class="highlight">Mukti Narayan</span></h1>
+      <p class="hero-sub">Aerospace Engineering Student &nbsp;|&nbsp; Rocketry Enthusiast</p>
+      <div class="hero-buttons">
+        <a href="#projects" class="btn btn-primary">🔭 View Projects</a>
+        <a href="#contact" class="btn btn-outline">✉️ Contact Me</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============== ABOUT =============== -->
+  <section id="about">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2>About <span>Me</span></h2>
+        <span class="underline"></span>
+      </div>
+
+      <div class="about-grid">
+        <!-- avatar placeholder -->
+        <div class="about-image-wrapper reveal">
+          <img src="profile.jpg" alt="Mukti Narayan" class="about-image" />
+        </div>
+
+        <div class="about-text reveal">
+          <h3>Aspiring <span>Aerospace Engineer</span></h3>
+          <p>
+            I'm Mukti Narayan, an aerospace engineering student from India driven by an insatiable curiosity about
+            flight, propulsion, and everything beyond our atmosphere. From studying the fluid dynamics around airfoils
+            to designing and simulating model rockets, I thrive at the intersection of science and engineering
+            innovation. My goal is to contribute to the next generation of launch vehicles and aircraft systems.
+          </p>
+          <ul class="info-list">
+            <li><strong>Name:</strong> Mukti Narayan</li>
+            <li><strong>Location:</strong> India</li>
+            <li><strong>Degree:</strong> B.Tech Aerospace</li>
+            <li><strong>Focus:</strong> Propulsion &amp; Aerodynamics</li>
+          </ul>
+          <a href="#contact" class="btn btn-primary">Let's Connect</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============== SKILLS =============== -->
+  <section id="skills">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2>My <span>Skills</span></h2>
+        <span class="underline"></span>
+      </div>
+
+      <div class="skills-wrapper">
+        <!-- Technical Skills -->
+        <div class="skill-category reveal">
+          <h3>⚙️ Technical Skills</h3>
+
+          <div class="skill-item">
+            <div class="skill-info"><span>Aerodynamics</span><span>85%</span></div>
+            <div class="skill-bar">
+              <div class="skill-fill" data-width="85"></div>
+            </div>
+          </div>
+
+          <div class="skill-item">
+            <div class="skill-info"><span>Rocket Propulsion</span><span>80%</span></div>
+            <div class="skill-bar">
+              <div class="skill-fill" data-width="80"></div>
+            </div>
+          </div>
+
+          <div class="skill-item">
+            <div class="skill-info"><span>Aircraft Structures</span><span>75%</span></div>
+            <div class="skill-bar">
+              <div class="skill-fill" data-width="75"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tools & Software -->
+        <div class="skill-category reveal">
+          <h3>🛠️ Tools &amp; Software</h3>
+
+          <div class="skill-item">
+            <div class="skill-info"><span>MATLAB</span><span>80%</span></div>
+            <div class="skill-bar">
+              <div class="skill-fill" data-width="80"></div>
+            </div>
+          </div>
+
+          <div class="skill-item">
+            <div class="skill-info"><span>OpenRocket</span><span>85%</span></div>
+            <div class="skill-bar">
+              <div class="skill-fill" data-width="85"></div>
+            </div>
+          </div>
+
+          <div class="skill-item">
+            <div class="skill-info"><span>CFD Basics</span><span>65%</span></div>
+            <div class="skill-bar">
+              <div class="skill-fill" data-width="65"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============== PROJECTS =============== -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2>My <span>Projects</span></h2>
+        <span class="underline"></span>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Project 1 -->
+        <div class="project-card reveal">
+          <div class="project-thumb">🚀</div>
+          <div class="project-body">
+            <h3>A Rocket's Ascent</h3>
+            <p>
+              Designed and simulated a model rocket from scratch — covering airframe geometry, motor selection,
+              stability analysis, and trajectory prediction using OpenRocket.
+            </p>
+            <div class="project-tags">
+              <span>OpenRocket</span>
+              <span>Model Rocketry</span>
+              <span>Simulation</span>
+              <span>Trajectory Analysis</span>
+            </div>
+            <a href="#" class="btn btn-outline btn-sm">View Details →</a>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card reveal">
+          <div class="project-thumb">📄</div>
+          <div class="project-body">
+            <h3>Review on Model Rocket Design &amp; Propulsion</h3>
+            <p>
+              Comprehensive literature review covering solid propellant chemistry, nozzle design, drag reduction
+              techniques, and flight stability of small-scale rockets.
+            </p>
+            <div class="project-tags">
+              <span>Research Paper</span>
+              <span>Propulsion</span>
+              <span>Nozzle Design</span>
+              <span>Stability</span>
+            </div>
+            <a href="#" class="btn btn-outline btn-sm">View Details →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============== EDUCATION =============== -->
+  <section id="education">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2>My <span>Education</span></h2>
+        <span class="underline"></span>
+      </div>
+
+      <div class="education-card reveal">
+        <div class="edu-icon">🎓</div>
+        <div class="edu-info">
+          <h3>B.Tech in Aerospace Engineering</h3>
+          <p class="edu-school">Chandigarh University</p>
+          <p class="edu-meta">India &nbsp;·&nbsp; Currently Pursuing</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============== CONTACT =============== -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2>Get in <span>Touch</span></h2>
+        <span class="underline"></span>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Info -->
+        <div class="contact-info reveal">
+          <h3>Let's build the future together.</h3>
+          <p>Have a question, an idea, or just want to talk aerospace? Drop me a message and I'll get back to you soon.
+          </p>
+          <div class="contact-socials">
+            <a href="https://www.linkedin.com/in/mukti-narayan-902823291" target="_blank" rel="noopener"
+              aria-label="LinkedIn" title="LinkedIn">
+              <!-- LinkedIn SVG icon -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+              </svg>
+            </a>
+            <a href="https://github.com/" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub">
+              <!-- GitHub SVG icon -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <form class="contact-form reveal" id="contactForm" novalidate>
+          <div class="form-group">
+            <input type="text" id="formName" placeholder="Your Name" required />
+            <span class="error-msg">Name is required.</span>
+          </div>
+          <div class="form-group">
+            <input type="email" id="formEmail" placeholder="Your Email" required />
+            <span class="error-msg">Enter a valid email address.</span>
+          </div>
+          <div class="form-group">
+            <textarea id="formMessage" placeholder="Your Message" required></textarea>
+            <span class="error-msg">Message cannot be empty.</span>
+          </div>
+          <button type="submit" class="btn btn-primary">🚀 Send Message</button>
+          <p class="form-status" id="formStatus"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============== FOOTER =============== -->
+  <footer class="footer">
+    <p>&copy; 2026 <span>Mukti Narayan</span>. Crafted with passion for the skies.</p>
+  </footer>
+
+  <!-- =============== BACK TO TOP =============== -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
